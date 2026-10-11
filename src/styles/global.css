@@ -273,7 +273,8 @@ h1 {
 .entry::before {
   content: '';
   position: absolute;
-  left: -43px;
+  left: -37.5px; /* 선(3px) 중앙 */
+  transform: translateX(-50%);
   top: 6px;
   width: 12px;
   height: 12px;
@@ -291,7 +292,6 @@ h1 {
 .entry.milestone::before {
   width: 18px;
   height: 18px;
-  left: -46px;
   top: 3px;
 }
 
@@ -469,11 +469,11 @@ h1 {
 }
 
 .hero {
+  /* 각 원은 자기 타일 안에서 closest-side 로 그려 잘리지 않는다 */
   background:
-    radial-gradient(260px 260px at 90% 12%, var(--sun) 0, transparent 70%),
-    radial-gradient(320px 320px at 6% 78%, var(--lav) 0, transparent 70%),
-    radial-gradient(700px 360px at 60% -10%, var(--accent-soft), transparent 70%), var(--bg);
-  opacity: 1;
+    radial-gradient(circle closest-side, var(--sun), transparent) no-repeat right 4% top 12% / min(260px, 60vw) min(260px, 60vw),
+    radial-gradient(circle closest-side, var(--lav), transparent) no-repeat left 3% bottom 6% / min(320px, 70vw) min(320px, 70vw),
+    radial-gradient(ellipse 60% 70% at 60% 0%, var(--accent-soft), transparent), var(--bg);
 }
 
 .hero-body::after {
