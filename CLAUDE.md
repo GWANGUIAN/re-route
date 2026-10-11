@@ -1,6 +1,6 @@
-# career-journey
+# re-route
 
-커리어(채용 → 프론트엔드 → 다음)와 개인 프로젝트를 날짜순으로 보여주는 개인 사이트. React + TypeScript + Vite, GitHub Pages(`/career-journey/`) 배포.
+커리어(채용 → 프론트엔드 → 다음)와 개인 프로젝트를 날짜순으로 보여주는 개인 사이트. React + TypeScript + Vite, GitHub Pages(`/re-route/`) 배포.
 
 - 콘텐츠는 `src/data/timeline.ts`, `src/data/profile.ts` 두 파일만 고치면 됩니다. 추가 절차는 `docs/ADD_ENTRY.md`.
 - 다른 레포 조사 내용은 `docs/PROJECTS.md`. 새 행보를 추가하면 이 문서도 갱신합니다.

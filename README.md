@@ -1,4 +1,4 @@
-# Career Journey
+# Re-route
 
 채용 → 프론트엔드 → 다음 이야기. 커리어와 개인 프로젝트를 날짜순으로 정리한 개인 사이트입니다.
 React + TypeScript + Vite, GitHub Pages 배포.

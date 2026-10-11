@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <header className="hero">
       <nav className="nav">
-        <span className="brand">Career Journey</span>
+        <span className="brand">Re-route</span>
         <div className="nav-links">
           <a href="#about">이유</a>
           <a href="#timeline">행적</a>
