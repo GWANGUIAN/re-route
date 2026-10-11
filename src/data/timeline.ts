@@ -1,0 +1,123 @@
+import type { TimelineEntry } from './types'
+
+/**
+ * 새 행보를 추가할 때는 이 배열에 객체 하나만 추가하면 됩니다. (docs/ADD_ENTRY.md 참고)
+ * 개인정보(이름·회사명·연락처)는 절대 넣지 않습니다.
+ */
+export const timeline: TimelineEntry[] = [
+  {
+    id: 'hr',
+    dateLabel: '인턴 1년 → 계약직 6개월',
+    category: 'career',
+    title: '인사팀 채용 업무',
+    summary: '채용 담당으로 커리어를 시작했어요. 사람을 만나고 연결하는 일도 즐거웠지만, 더 재미있는 일을 찾아보기로 했습니다.',
+    tags: ['채용', '인사'],
+  },
+  {
+    id: 'bootcamp',
+    date: '2021-06',
+    endDate: '2021-12',
+    category: 'career',
+    title: '개발자로 커리어 전환',
+    summary: '상상한 기능이 실제로 동작하는 모습이 재미있어서 부트캠프에 들어갔어요. 6개월 과정을 수료했습니다.',
+    tags: ['부트캠프', 'React', 'TypeScript'],
+    milestone: true,
+  },
+  {
+    id: 'dev-1',
+    date: '2022-03',
+    endDate: '2023-12',
+    category: 'career',
+    title: '첫 개발 커리어 · 매칭 서비스와 병원 CMS',
+    summary: '웹서비스 초기 세팅부터 배포까지 맡으며 실무의 기본기를 다졌어요.',
+    points: [
+      '매칭 서비스 웹·CRM 프론트엔드 전체 기능 구현, 배포 파이프라인 구성',
+      '고객사 병원 홈페이지·CMS 개발, 이미지 Lazy Loading 적용',
+      'GitHub Actions 빌드 최적화로 빌드 시간 30% 단축',
+    ],
+    tags: ['Next.js', 'TypeScript', 'React Query', 'Redux'],
+  },
+  {
+    id: 'dev-2',
+    date: '2024-01',
+    endDate: '2026-04',
+    category: 'career',
+    title: '보안·AI 솔루션 개발 · LLM 채팅 플랫폼',
+    summary: '모노레포 환경에서 접근제어 솔루션과 어드민 구성형 LLM 채팅 플랫폼을 만들었어요.',
+    points: [
+      'DB 민감정보를 감지·마스킹하는 AI 기능을 단독 개발',
+      'FSD 기반 대규모 리팩토링, 모노레포 패키지 정리',
+      'MCP App 스펙을 채팅 서비스에 연동, 라이선스 고지 문서 생성 자동화',
+    ],
+    tags: ['React', 'Turbo', 'MobX', 'MCP', 'AI 도구'],
+  },
+  {
+    id: 'leave',
+    date: '2026-04',
+    category: 'career',
+    title: '퇴사 · 재미를 다시 찾기로 하다',
+    summary: 'AI에게 일을 시키고 결과를 리뷰하는 방식이 재미없고 무기력하게 느껴졌어요. 직접 만드는 즐거움을 되찾기 위해 회사를 떠났습니다.',
+    milestone: true,
+  },
+  {
+    id: 'conch',
+    date: '2026-07-28',
+    endDate: '2026-07-29',
+    category: 'project',
+    title: '마법의 소라고동',
+    summary: '스폰지밥의 마법의 소라고동을 패러디한 사이트. 퇴사 후 개인 프로젝트의 시작이에요.',
+    tags: ['React', 'Vite', 'GitHub Pages'],
+    links: [{ label: '사이트 열기', url: 'https://gwanguian.github.io/magic-conch-shell/' }],
+    image: 'conch.webp',
+  },
+  {
+    id: 'fc26',
+    date: '2026-08-16',
+    endDate: '2026-10-04',
+    category: 'project',
+    title: '잔디동 대시보드',
+    summary:
+      '스트리머 동아리 "잔디동"의 지원자 활동을 한눈에 보는 대시보드. 카페 글을 자동 수집하고, 전적 스크린샷을 AI로 판독해 디비전 현황과 업적을 보여줘요. 팬으로서 조공한 프로젝트입니다.',
+    points: ['AWS 서버리스 수집 파이프라인, Gemini Vision 전적 판독', '미니게임·포토부스·도트 RPG 월드 등 부가 인터랙션'],
+    tags: ['React', 'AWS Lambda', 'Gemini', 'Cloudflare'],
+    links: [{ label: '사이트 열기', url: 'https://wakjandy.stream/' }],
+  },
+  {
+    id: 'google-ads',
+    date: '2026-09-04',
+    endDate: '2026-09-13',
+    category: 'project',
+    title: '유틸 사이트 + 광고 수익화 실험',
+    summary:
+      '이미지 변환, 계산기, PDF 도구 등 정적 유틸 사이트를 모노레포로 만들고 구글 애드센스로 수익화를 시도했어요. 심사 탈락·대기 상태라 지금은 보류 중입니다.',
+    points: ['14개 앱을 하나의 모노레포에서 관리, 공통 디자인·SEO·광고 슬롯 규칙 정리', 'Cloudflare Pages + GitHub Actions 자동 배포'],
+    tags: ['Astro', 'pnpm', 'Turborepo', 'SEO', 'AdSense'],
+    links: [
+      { label: 'loomfile', url: 'https://loomfile.com/' },
+      { label: 'pwcheckup', url: 'https://pwcheckup.com/' },
+      { label: 'hexnook', url: 'https://hexnook.dev/' },
+      { label: 'kcalc', url: 'https://kcalc.site/' },
+    ],
+  },
+  {
+    id: 'avatar',
+    date: '2026-09-29',
+    endDate: '2026-10-10',
+    category: 'project',
+    title: 'AI로 만드는 VRChat 아바타',
+    summary: '스트리머들에게 선물할 VRChat 아바타를 AI 도구로 만들어요. 캐릭터 레퍼런스에서 3D 모델, 표정, 업로드 가이드까지 하나의 작업 흐름으로 정리했습니다.',
+    points: ['캐릭터 30여 종의 레퍼런스·기획·진행 문서화', '납품용 썸네일·업로드 가이드 자동 구성'],
+    tags: ['Unity', 'VRChat', 'AI 에이전트', '3D'],
+  },
+  {
+    id: 'kano-sbo',
+    date: '2026-10-05',
+    category: 'project',
+    title: '대회 지원 어필 사이트',
+    summary: 'VRChat 야구 대회 SBO에 지원한 스트리머가 뽑히도록 돕기 위해 만든 어필 사이트예요. 3D 캐릭터, 픽셀 애니메이션, 응원 메시지, 미니 놀이터까지 담았습니다.',
+    tags: ['React 19', 'TypeScript', 'three.js', 'Cloudflare Workers'],
+    links: [{ label: '사이트 열기', url: 'https://sbo.kano.stream/' }],
+  },
+]
+
+export const avatarThumbs = ['kanosd', 'yushak', 'nanwoni', 'jumengyi', 'hiki', 'jaenin']
