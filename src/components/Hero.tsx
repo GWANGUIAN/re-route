@@ -9,7 +9,7 @@ export function Hero() {
         <div className="nav-links">
           <a href="#about">이유</a>
           <a href="#timeline">행적</a>
-          <a href="#avatars">갤러리</a>
+          <a href="#avatars">아바타</a>
           <ThemeToggle />
         </div>
       </nav>

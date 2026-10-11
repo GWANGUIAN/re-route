@@ -106,7 +106,7 @@ export const timeline: TimelineEntry[] = [
     category: 'project',
     title: 'AI로 만드는 VRChat 아바타',
     summary: '스트리머들에게 선물할 VRChat 아바타를 AI 도구로 만들어요. 캐릭터 레퍼런스에서 3D 모델, 표정, 업로드 가이드까지 하나의 작업 흐름으로 정리했습니다.',
-    points: ['캐릭터 30여 종의 레퍼런스·기획·진행 문서화', '납품용 썸네일·업로드 가이드 자동 구성'],
+    points: ['캐릭터 35종(마스코트 29 + SD 6)의 레퍼런스·기획·진행 문서화', '납품용 썸네일·업로드 가이드 자동 구성'],
     tags: ['Unity', 'VRChat', 'AI 에이전트', '3D'],
   },
   {
@@ -119,5 +119,3 @@ export const timeline: TimelineEntry[] = [
     links: [{ label: '사이트 열기', url: 'https://sbo.kano.stream/' }],
   },
 ]
-
-export const avatarThumbs = ['kanosd', 'yushak', 'nanwoni', 'jumengyi', 'hiki', 'jaenin']

@@ -45,6 +45,10 @@ git log --format='%ad' --date=short | sort | uniq -c
 
 `scripts/git-ranges.sh`가 위 레포들을 한 번에 출력합니다.
 
-## 4. 사이트에 쓰는 썸네일
+## 4. 사이트에 쓰는 이미지
 
-`public/thumbs/*.webp` 는 `../3d-avator/deliveries/*/…-thumbnail-1200x900.png` 와 `../magic-conch-shell/public/shell.webp` 를 600px webp로 줄인 것입니다. 원본은 수정하지 않습니다.
+- `public/avatars/<id>.webp` (480px): 3d-avator의 캐릭터 35종 최종 썸네일을 줄인 것. 목록·이름·분류는 `src/data/avatars.ts`.
+  - 원본 위치: `../3d-avator/reports/<id>/session5/thumbnail-1200x900.png`, SD 6종은 `../3d-avator/deliveries/<id>/*-thumbnail-1200x900.png`, 돌멩이는 `reports/dolmengyi/session6/thumbnail.png`, 용볼이는 `reports/session8/thumbnail.png`.
+  - 새 캐릭터가 생기면 썸네일을 같은 방식으로 변환(sharp, 폭 480, webp q78)해 넣고 `avatars.ts`에 한 줄 추가.
+- `public/thumbs/conch.webp`: `../magic-conch-shell/public/shell.webp`를 600px로 줄인 것.
+원본은 수정하지 않습니다.

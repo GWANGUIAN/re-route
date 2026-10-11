@@ -1,48 +1,34 @@
+/* 밝고 귀여운 파스텔 팔레트 */
 :root {
-  --bg: #faf5ec;
-  --bg-soft: #f3ead9;
-  --card: #fffdf8;
-  --ink: #2b2118;
-  --ink-soft: #6b5d4e;
-  --line: #e8dcc8;
-  --accent: #d9633b;
-  --accent-soft: #fbe3d8;
-  --career: #3b7a6b;
-  --career-soft: #dcefe9;
-  --shadow: 0 6px 24px rgba(80, 55, 25, 0.08);
-  --radius: 18px;
+  --bg: #fff7f0;
+  --bg-soft: #ffeede;
+  --card: #ffffff;
+  --ink: #4a3a47;
+  --ink-soft: #8a7684;
+  --line: #ffd9e3;
+  --accent: #ff7aa8;
+  --accent-soft: #ffe3ee;
+  --career: #3fbf9f;
+  --career-soft: #d9f7ee;
+  --sun: #ffd25e;
+  --lav: #c9b8ff;
+  --shadow: 0 4px 0 rgba(255, 122, 168, 0.22);
+  --radius: 24px;
   color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme='light']) {
-    --bg: #1a1612;
-    --bg-soft: #221c16;
-    --card: #262019;
-    --ink: #f1e8da;
-    --ink-soft: #b9ab98;
-    --line: #3a3128;
-    --accent: #f0875f;
-    --accent-soft: #3d2519;
-    --career: #6fc2ad;
-    --career-soft: #1f3a33;
-    --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
-    color-scheme: dark;
-  }
-}
-
 :root[data-theme='dark'] {
-  --bg: #1a1612;
-  --bg-soft: #221c16;
-  --card: #262019;
-  --ink: #f1e8da;
-  --ink-soft: #b9ab98;
-  --line: #3a3128;
-  --accent: #f0875f;
-  --accent-soft: #3d2519;
-  --career: #6fc2ad;
-  --career-soft: #1f3a33;
-  --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+  --bg: #2b2233;
+  --bg-soft: #352b3f;
+  --card: #3a2f45;
+  --ink: #fff0f6;
+  --ink-soft: #cdb9ca;
+  --line: #5a4668;
+  --accent: #ff9cc0;
+  --accent-soft: #55304a;
+  --career: #7be0c3;
+  --career-soft: #2c4a45;
+  --shadow: 0 4px 0 rgba(0, 0, 0, 0.25);
   color-scheme: dark;
 }
 
@@ -466,4 +452,155 @@ h1 {
     top: 2px;
     margin: 0;
   }
+}
+
+/* ---------- 귀여운 마감 ---------- */
+h1,
+h2,
+.year,
+.brand,
+.stats strong {
+  font-family: 'Jua', 'Pretendard Variable', sans-serif;
+  font-weight: 400;
+}
+
+h1 {
+  letter-spacing: -0.02em;
+}
+
+.hero {
+  background:
+    radial-gradient(260px 260px at 90% 12%, var(--sun) 0, transparent 70%),
+    radial-gradient(320px 320px at 6% 78%, var(--lav) 0, transparent 70%),
+    radial-gradient(700px 360px at 60% -10%, var(--accent-soft), transparent 70%), var(--bg);
+  opacity: 1;
+}
+
+.hero-body::after {
+  content: '🍀 ✨ 🐣';
+  display: block;
+  margin-top: 28px;
+  font-size: 1.5rem;
+  letter-spacing: 0.4em;
+}
+
+.eyebrow {
+  display: inline-block;
+  background: var(--card);
+  border: 2px solid var(--accent);
+  border-radius: 999px;
+  padding: 2px 16px;
+}
+
+.card,
+.stats li,
+.gallery li {
+  border: 2px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.stats li:nth-child(odd) {
+  transform: rotate(-2deg);
+}
+.stats li:nth-child(even) {
+  transform: rotate(2deg);
+}
+
+.reason:nth-child(1) {
+  background: var(--accent-soft);
+}
+.reason:nth-child(2) {
+  background: var(--career-soft);
+  border-color: var(--career);
+  box-shadow: 0 4px 0 rgba(63, 191, 159, 0.3);
+}
+
+.chip {
+  border-width: 2px;
+  font-weight: 600;
+  transition: transform 0.15s;
+}
+.chip:hover {
+  transform: translateY(-2px);
+}
+.chip.on {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.year-group ol {
+  border-left: 3px dashed var(--accent);
+}
+.entry::before {
+  box-shadow: none;
+  border: 3px solid var(--card);
+  outline: 2px solid var(--accent);
+}
+.entry.career::before {
+  outline-color: var(--career);
+}
+
+.entry .card {
+  transition: transform 0.2s;
+}
+.entry .card:hover {
+  transform: translateY(-3px) rotate(-0.4deg);
+}
+
+.badge {
+  font-weight: 700;
+}
+
+.links a {
+  border-width: 2px;
+}
+
+.gallery {
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 14px;
+  margin-top: 22px;
+}
+
+.gallery li.avatar {
+  background: var(--card);
+  border-radius: 22px;
+  padding: 8px 8px 12px;
+  text-align: center;
+  transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+.gallery li.avatar:hover {
+  transform: translateY(-5px) rotate(1.5deg);
+}
+.gallery li.avatar:nth-child(3n + 1) {
+  background: var(--accent-soft);
+}
+.gallery li.avatar:nth-child(3n + 2) {
+  background: var(--career-soft);
+}
+.gallery li.avatar:nth-child(3n) {
+  background: color-mix(in srgb, var(--sun) 28%, var(--card));
+}
+.gallery .avatar img {
+  border: 0;
+  box-shadow: none;
+  border-radius: 16px;
+  aspect-ratio: 4 / 3;
+  height: auto;
+}
+.avatar strong {
+  margin-top: 8px;
+  font-family: 'Jua', 'Pretendard Variable', sans-serif;
+  font-weight: 400;
+  font-size: 1.05rem;
+}
+.avatar span {
+  font-size: 0.78rem;
+  color: var(--ink-soft);
+}
+
+.footer {
+  border-top: 3px dotted var(--line);
 }

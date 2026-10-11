@@ -4,12 +4,12 @@ type Theme = 'light' | 'dark'
 
 const initial = (): Theme => {
   try {
-    const saved = localStorage.getItem('theme')
+    const saved = localStorage.getItem('theme-v2')
     if (saved === 'light' || saved === 'dark') return saved
   } catch {
     /* storage unavailable */
   }
-  return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+  return 'light'
 }
 
 export function ThemeToggle() {
@@ -18,7 +18,7 @@ export function ThemeToggle() {
   useEffect(() => {
     document.documentElement.dataset.theme = theme
     try {
-      localStorage.setItem('theme', theme)
+      localStorage.setItem('theme-v2', theme)
     } catch {
       /* ignore */
     }
